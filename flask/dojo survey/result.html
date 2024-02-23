@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Results</title>
+    <!-- Include CSS framework (e.g., Bootstrap) for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Survey Results</h1>
+        <p><strong>Name:</strong> {{ session['name'] }}</p>
+        <p><strong>Location:</strong> {{ session['location'] }}</p>
+        <p><strong>Favorite Language:</strong> {{ session['language'] }}</p>
+        <p><strong>Comments:</strong> {{ session['comments'] }}</p>
+        <p><strong>Gender:</strong> {{ session['gender'] }}</p>
+        <p><strong>Pets:</strong> {{ ', '.join(session['pets']) if session['pets'] else 'None' }}</p>
+    </div>
+</body>
+</html>
